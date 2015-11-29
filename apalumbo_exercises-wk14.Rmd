@@ -166,3 +166,19 @@ colnames(E) <- c("A", "B")
 knitr::kable(find_triangles(E))
 ```
 
+\pagebreak
+
+## Discussion Problem
+
+Let's see if we can get a measure of performance
+
+```{r}
+library(microbenchmark)
+library(ggplot2)
+
+tm <- microbenchmark(find_triangles(E))
+autoplot(tm)
+print(tm)
+```
+
+
